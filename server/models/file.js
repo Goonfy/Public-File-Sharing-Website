@@ -9,4 +9,12 @@ let FileSchema = new Schema({
   firstIP: { type: String, required: false, max: 100, default: null }
 });
 
+let FileSchema = new Schema({
+  name: { type: String, required: true, max: 100 },
+  encodedName: { type: String, required: false, max: 100, default: null },
+  originalName: { type: String, required: false, max: 100, default: null },
+  firstIP: { type: String, required: false, max: 100, default: null }
+  firstIP: { type: String, required: false, max: 100, default: null }
+});
+
 module.exports = mongoose.model('file', FileSchema, 'files');
